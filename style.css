@@ -99,8 +99,9 @@ padding: 8px 19px;
     }
   
     .astro-img {
-      height: 400px; /* Adjust height of the image */
       margin-left: 20px;
+      padding: 0px;
+      height: 400px;
     }
   }
   
@@ -119,9 +120,7 @@ padding: 8px 19px;
       font-size: 0.9rem; /* Compact font size for small screens */
     }
   
-    .astro-img {
-      height: 400px; /* Adjust image height for small screens */
-    }
+    
   }
   
   /* Extra Small Devices (Portrait phones, 360px and below) */
@@ -134,21 +133,17 @@ padding: 8px 19px;
       font-size: 0.8rem; /* Reduce font size for very small screens */
     }
   
-    .astro-img {
-      height: 250px; /* Further reduce image height */
-    }
+   
   }
   
 
   /* why choose us */
   .consult-section {
-    background-color: #f8f9fa;
 
     font-family: Arial, sans-serif; /* Apply normal font family */
 }
   
   .consult-form {
-    border: 1px solid #ddd;
     background-color: #5C0404 !important;
     
   }
@@ -183,3 +178,13 @@ padding: 8px 19px;
    }
   }
   
+
+  .aboutus{
+    font-family: sans-serif;
+  }
+  .aboutus h1{
+    font-weight: 600;
+  }
+  .aboutname{
+    color:#5C0404;
+  }
