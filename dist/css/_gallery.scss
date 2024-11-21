@@ -1,0 +1,176 @@
+// gallery css
+.gallery-sec {
+
+    .gallery-card {
+        position: relative;
+        width: 100%;
+        border-radius: $theme-border-radius;
+        overflow: hidden;
+
+        figure {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+
+            img {
+                position: relative;
+                display: block;
+                min-height: 100%;
+                min-width: 100%;
+                opacity: 0.8;
+            }
+
+            .gallery-text {
+                transition: transform 0.5s, opacity 0.3s;
+                position: absolute;
+                z-index: 99;
+                bottom: 37px;
+                opacity: 0;
+                transform: translateY(0);
+                max-width: 100%;
+                margin-left: 1rem;
+
+                .heading {
+                    color: $theme-color-white;
+                    font-size: 1.5rem;
+                }
+
+                .title {
+                    color: $theme-secondary-color;
+                    font-size: 1rem;
+                }
+            }
+
+            &:hover {
+                .gallery-text {
+                    opacity: 1;
+                    transform: translateY(20px);
+                }
+            }
+
+            .bg-overlay {
+                transition: transform 0.3s;
+                position: absolute;
+                left: 0;
+                transform: translatey(100%);
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background: linear-gradient(180deg, rgba($theme-color-dark, 1) 61.5%, rgba($theme-color-dark, .4) 82.25%);
+
+            }
+
+            &:hover {
+                .bg-overlay {
+                    transform: translatey(0);
+                }
+            }
+        }
+    }
+
+    .colum5 {
+        .gallery-card {
+            figure {
+                max-height: 250px;
+
+                .gallery-text {
+
+                    .heading,
+                    .title {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// filter - mix gallery css
+.filter-controls {
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $theme-color-white;
+        background: $theme-color-dark;
+        cursor: pointer;
+        border-radius: $theme-border-radius;
+        transition: 0.3s all;
+
+        &:hover {
+            background: $theme-primary-color;
+            color: $theme-color-white;
+        }
+
+        &.active {
+            background: $theme-primary-color;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// magnigy popup animation
+.mfp-zoom-in {
+
+    /* start state */
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.8);
+    }
+
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    /* animate in */
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+
+    /* animate out */
+    &.mfp-removing {
+
+        .mfp-with-anim {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        &.mfp-bg {
+            opacity: 0;
+        }
+
+    }
+
+}
+
+// gallery post css
+.carouselGallerySlider {
+    .owl-nav {
+        left: unset;
+        top: -100px;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}

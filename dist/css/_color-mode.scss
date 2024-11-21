@@ -1,0 +1,418 @@
+.svg-sprt {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+
+nav {
+    position: relative;
+
+    @media screen and (max-width:$break-medium) {
+        .navbar-brand {
+            width: 60%;
+        }
+    }
+
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+
+    .dropdown {
+
+        button {
+            color: inherit;
+            box-shadow: none;
+            background: $theme-accent-two;
+            padding: 0.25rem 0.5rem;
+            border-radius: $theme-border-radius;
+
+            &:hover {
+                background-color: $theme-accent-one;
+            }
+
+            &.dropdown-toggle {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            width: auto;
+            border-radius: 0;
+            padding: 0;
+            min-width: 36px;
+            border-radius: $theme-border-radius;
+            z-index: 2;
+
+            li {
+                width: auto;
+                margin: 0;
+
+                .dropdown-item {
+                    width: auto;
+                    margin: 0;
+                    padding: 0.5rem;
+                    min-width: 36px;
+                    justify-content: center;
+
+                    &:active,
+                    &.active {
+                        background-color: $theme-accent-one;
+                        ;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+.pg-blog {
+    .switch {
+        @media screen and (max-width:$break-medium) {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
+
+
+// scss dark color mode
+[data-bs-theme=dark] {
+    body {
+        background-color: $theme-color-dark;
+    }
+
+    .info-top {
+        .close-btn {
+            filter: grayscale(1%);
+        }
+    }
+
+    .top {
+
+        a,
+        .notify-btn i {
+            color: $theme-color-white;
+
+            &:hover {
+                color: $theme-primary-color;
+            }
+        }
+
+        .item-wrap {
+            .main-box {
+                background-color: $theme-color-dark;
+
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                color: $theme-color-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search-model {
+        background-color: $theme-color-dark;
+    }
+
+    .header {
+        background-color: $theme-color-dark;
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $theme-color-white;
+
+                    &.sub {
+                        color: $theme-color-white;
+                    }
+                }
+
+                .dropdown-menu {
+                    background-color: $theme-color-dark;
+                    @include theme-shadow;
+
+                    .dropdown-item {
+                        color: $theme-color-white;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .logo-dark {
+        display: none;
+    }
+
+    .hero {
+        &::before {
+            background: linear-gradient(270deg, rgba($theme-color-dark, 1) 0%, rgba($theme-color-dark, 0.85) 100%);
+        }
+    }
+
+    // hero single slider section
+    .hero-single {
+
+        #hero-single-slider {
+            .hero-single-items {
+
+                &:before {
+                    background-color: rgba($theme-color-dark, 0.26);
+                }
+
+                .hero-con {
+
+                    .heading {
+                        color: $theme-primary-color;
+                    }
+
+                    p {
+                        color: $theme-color-white;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .cardeffect {
+        background-color: rgba($theme-color-dark, 0.9);
+    }
+
+    .core-services {
+
+        svg {
+            fill: $theme-color-white;
+        }
+
+        #kundli {
+            path {
+                stroke: $theme-color-dark;
+            }
+        }
+    }
+
+    .blog {
+        .blog-card {
+            .tags {
+                color: $theme-color-white;
+                background-color: $theme-secondary-color;
+            }
+
+            .title {
+                a {
+                    color: $theme-color-white;
+                }
+            }
+        }
+    }
+
+    .call-to-action {
+        background-color: $theme-secondary-color;
+    }
+
+    .footer {
+
+        h1,
+        h2,
+        h3 {
+            color: $theme-color-white;
+        }
+
+        p {
+            color: $theme-accent-two;
+        }
+
+        .link-list {
+            li {
+                a {
+                    color: $theme-color-white;
+
+                    &:hover {
+                        color: $theme-accent-one;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .auth-area {
+        background-image: none;
+
+    }
+
+    .nav-category {
+        .nav-item {
+            .nav-link {
+                color: $theme-color-white;
+
+                &:hover {
+                    color: $theme-primary-color;
+                }
+            }
+        }
+    }
+
+    .form-check-input {
+        border-color: $theme-color-white;
+    }
+
+    #offcanvasCategory .form-check-label {
+        color: $theme-color-white;
+    }
+
+    .shop-detail ul li,
+    .shop-detail p,
+    .shop-detail .nav-lb-tab .nav-item .nav-link {
+        color: $theme-color-white;
+    }
+
+    .shop-detail ul li:before {
+        background-color: $theme-color-white;
+    }
+
+    .shop-detail .nav-lb-tab .nav-item .nav-link:hover,
+    .shop-detail .nav-lb-tab .nav-item .nav-link.active {
+        color: $theme-primary-color;
+        border-bottom-color: $theme-primary-color;
+    }
+
+    // how it work css
+    .how-it-work {
+        background-color: $theme-color-dark;
+
+        .box {
+            .point {
+                color: $theme-accent-one;
+            }
+        }
+    }
+}
+
+// scss light color mode
+[data-bs-theme=light] {
+    .header {
+        background-color: $theme-color-white;
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $theme-color-dark;
+                }
+            }
+        }
+    }
+
+    .logo-light {
+        display: none;
+    }
+
+    .hero {
+        &::before {
+            background: linear-gradient(270deg, rgba($theme-color-dark, 0.7) 0%, rgba($theme-color-white, 0.5) 100%);
+        }
+
+        .animate-charcter {
+            background-image: linear-gradient(-225deg, $theme-color-dark 0%, $theme-primary-color 100%);
+        }
+    }
+
+    .call-to-action {
+        background-color: $theme-color-dark;
+    }
+
+    .footer {
+        background-color: $theme-accent-two;
+
+    }
+}
+
+// scss custom color mode
+[data-bs-theme=auto] {
+    .header {
+        background-color: $theme-secondary-color;
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $theme-color-white;
+
+                    &.sub {
+                        color: $theme-color-white;
+                    }
+                }
+
+                .dropdown-menu {
+                    background-color: $theme-secondary-color;
+                    @include theme-shadow;
+
+                    .dropdown-item {
+                        color: $theme-color-white;
+                    }
+
+                    h5 {
+                        color: $theme-accent-one;
+                    }
+                }
+            }
+        }
+    }
+
+    .switch .dropdown button {
+        color: $theme-primary-color;
+    }
+
+    .logo-dark {
+        display: none;
+    }
+
+    .zodicsign-sec {
+        background-color: $theme-secondary-color;
+    }
+
+    .about-company {
+        background-color: $theme-accent-two;
+    }
+
+    .core-services {
+        background-color: $theme-accent-two;
+
+        .cardeffect {
+            background-color: $theme-color-white;
+        }
+    }
+
+    .services {
+        background-color: $theme-accent-two;
+    }
+
+    .review {
+        background-color: $theme-color-white;
+    }
+
+    .news {
+        background-color: $theme-accent-two;
+        padding: 10rem 0;
+    }
+
+    .call-to-action {
+        background-color: $theme-secondary-color;
+    }
+
+    .footer {
+        background-color: $theme-accent-one;
+    }
+}

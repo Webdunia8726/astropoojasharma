@@ -1,0 +1,64 @@
+@mixin custom-btn-primary {
+  background-color: $theme-primary-color;
+  color: $theme-color-white;
+  min-width: 160px;
+  min-height: 40px;
+  border: 0;
+}
+
+@mixin custom-btn-secondary {
+  background-color: $theme-secondary-color;
+  color: $theme-color-white;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $theme-primary-color;
+    color: $theme-color-white;
+  }
+}
+
+@mixin theme-shadow {
+  box-shadow: $theme-box-shadow;
+}
+
+@mixin shape-wrap {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  z-index: 0;
+}
+
+@mixin shape-small-wrap {
+  content: '';
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  z-index: 0;
+}
+
+@mixin shape-sun {
+  @include shape-wrap;
+  background-image: url(../images/icons/sun-icon.svg);
+  background-repeat: no-repeat;
+}
+
+@mixin shape-bright {
+  @include shape-wrap;
+  background-image: url(../images/icons/bright-icon.svg);
+  background-repeat: no-repeat;
+}
+
+@mixin shape-bright-sm {
+  @include shape-small-wrap;
+  background-image: url(../images/icons/bright-sm-icon.svg);
+  background-repeat: no-repeat;
+}
+
+@mixin shape-star {
+  @include shape-small-wrap;
+  background-image: url(../images/icons/star-icon.svg);
+  background-repeat: no-repeat;
+}

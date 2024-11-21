@@ -1,0 +1,709 @@
+// client page css
+#carouselPartner {
+    .owl-item img {
+        width: auto;
+        margin: auto;
+    }
+}
+
+// privacy page css
+.privacy-list {
+
+    li {
+        font-size: $font-small;
+        line-height: 2;
+        list-style: disc;
+        margin-left: 1.125rem;
+    }
+}
+
+// faq css
+.faq-cat {
+    li {
+        list-style: none;
+        line-height: 2.5rem;
+
+        a {
+            display: flex;
+            font-size: 1.25rem;
+
+            i {
+                padding-right: 1rem;
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+// price plan css
+.price-sec {
+    padding: 4rem 0;
+
+    .price-box {
+        border: 2px solid $theme-accent-one;
+        border-radius: $theme-border-radius;
+        text-align: start;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border-color: $theme-secondary-color;
+        }
+
+        &.box-2 {
+            border-color: $theme-primary-color;
+        }
+
+        &:hover {
+            .price {
+                color: $theme-primary-color;
+
+            }
+        }
+
+        .pricing-rate {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+
+            .price {
+                color: $theme-primary-color;
+            }
+        }
+
+        .list {
+            ul {
+                li {
+                    line-height: 3.0rem;
+                    color: $theme-primary-color;
+                }
+            }
+        }
+
+        .tag {
+            position: absolute;
+            top: -20px;
+            left: 29%;
+            padding: 7px 12px;
+            background-color: $theme-primary-color;
+            color: $theme-color-white;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 1;
+            border-radius: $theme-border-radius;
+        }
+    }
+}
+
+// our team css
+.our-team {
+    position: relative;
+
+    .team-card {
+        cursor: pointer;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+
+        &:hover {
+            .team-con {
+                visibility: visible;
+            }
+
+        }
+
+        .team-con {
+            box-shadow: $theme-box-shadow;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: rgba($theme-color-white, 0.5);
+            transition: all 0.4s ease-out 0s;
+            visibility: hidden;
+            border-radius: $theme-border-radius;
+
+            p {
+                color: $theme-color-white;
+            }
+
+
+            .team-social {
+                display: flex;
+
+                li {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $theme-accent-one;
+                        background-color: $theme-accent-three;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        margin: 0 0.5rem;
+
+                        &:hover {
+                            background-color: $theme-primary-color;
+                            color: $theme-color-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            transition: all 0.4s ease-out 0s;
+            width: -webkit-fill-available;
+        }
+
+        &:hover {
+            .team-con {
+                background-color: rgba($theme-primary-color, 0.5);
+
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// team Details
+.team-details {
+
+    .details-text {
+        position: relative;
+
+        p {
+            line-height: 30px;
+        }
+    }
+
+    .details-title {
+        margin-bottom: 20px;
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    .details-rating {
+        text-align: center;
+
+        .rating i {
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+
+        span {
+            display: block;
+            font-size: 1.2rem;
+        }
+    }
+
+    .details-widget {
+        margin-bottom: 15px;
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            list-style: none;
+            line-height: 30px;
+            position: relative;
+            padding-left: 18px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 12px;
+                height: 6px;
+                width: 6px;
+                background: $theme-primary-color;
+                border-radius: $theme-border-radius;
+            }
+
+            span {
+                width: 115px;
+                display: inline-block;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// services single left css
+.service-sidebar {
+    background: $theme-color-white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: $theme-border-radius;
+
+    .title {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .list {
+        li {
+            border-bottom: 1px solid $theme-accent-two;
+
+            &:last-child {
+                margin-bottom: 0px;
+                border-bottom: none;
+            }
+
+            a {
+                display: block;
+                padding: 10px 0;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    padding-left: 10px;
+                    color: $theme-secondary-color;
+                }
+
+                i {
+                    margin-right: 5px;
+                    color: $theme-primary-color;
+                }
+            }
+        }
+    }
+}
+
+// error page css
+.error {
+
+    .text {
+        background-image: url(../images/section/bgtext.jpg);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 20rem;
+        font-weight: 900;
+        line-height: 20rem;
+
+        @media screen and (max-width:$break-large) {
+            font-size: 15rem;
+        }
+
+        @media screen and (max-width:$break-small) {
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+    }
+}
+
+// checkout page css
+.order-detail {
+    background-color: rgba($theme-secondary-color, 1.0);
+    padding: 2rem;
+
+    p {
+        color: $theme-color-white;
+    }
+
+    .form-pay {
+        display: grid;
+        grid-gap: 1em;
+        gap: 1em;
+
+        .pay-radio {
+            align-items: center;
+            background-color: $theme-color-white;
+            border-radius: $theme-border-radius;
+            display: flex;
+            padding: 1rem;
+
+            label {
+                align-items: center;
+                display: flex;
+                flex: 1;
+                grid-gap: 1em;
+                gap: 1em;
+            }
+        }
+    }
+}
+
+// shop wishlist css
+.table-wislist {
+    th {
+        background-color: $theme-accent-three;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    td {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .whishlist-thumb {
+        height: 4rem;
+        line-height: 4rem;
+        width: 4rem;
+    }
+}
+
+// shop - column layout css
+.column-shop {
+
+    .card-wrap {
+
+        &:hover {
+            .con-wrap {
+                a {
+                    background: $theme-secondary-color;
+                    color: $theme-color-white;
+                }
+            }
+        }
+
+        .con-img-wrap {
+            position: relative;
+            border-radius: $theme-border-radius;
+            overflow: hidden;
+        }
+
+        .small-img {
+            min-height: 120px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .con-wrap {
+            text-align: center;
+
+            .text {
+                font-weight: 700;
+
+                a {
+                    color: $theme-secondary-color;
+
+                    &:hover {
+                        color: $theme-primary-color;
+                    }
+                }
+            }
+
+            .rating-cover {
+                i {
+                    color: orange;
+                }
+            }
+
+            .product-price {
+                margin: 1rem 0;
+
+                span,
+                i {
+                    color: $theme-primary-color;
+                }
+            }
+
+            a {
+                border: 1px solid $theme-primary-color;
+                width: auto;
+                height: auto;
+                border-radius: $theme-border-radius;
+                color: $theme-primary-color;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+// shop categories css
+.cat-zone {
+    .card-deal {
+        background-color: $theme-accent-one;
+    }
+}
+
+// shop details css
+.shop-detail {
+    padding: 2rem 0;
+
+    // shop details tab
+    .nav-lb-tab {
+        justify-content: center;
+
+        .nav-item {
+            margin-right: 2rem;
+
+            &::before {
+                content: '';
+                display: none;
+            }
+
+            .nav-link {
+                border-bottom: 2px solid transparent;
+                border-radius: 0;
+                color: $theme-primary-color;
+                font-weight: 500;
+                margin-bottom: -1px;
+                padding: 1rem 0.5rem;
+                white-space: nowrap;
+                background: none;
+                font-size: 1.25rem;
+
+
+                &:hover,
+                &.active {
+                    background-color: transparent;
+                    border-bottom: 2px solid $theme-secondary-color;
+                    color: $theme-secondary-color;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .table-transparent {
+        tr {
+
+            th,
+            td {
+                background-color: transparent;
+            }
+        }
+    }
+
+    p {
+        color: $theme-primary-color;
+    }
+
+    ul {
+        margin-left: 1rem;
+
+        li {
+            display: block;
+            padding: 6px 0;
+            color: $theme-primary-color;
+
+            &:before {
+                content: '';
+                width: 0.5rem;
+                height: 0.5rem;
+                display: inline-block;
+                background-color: $theme-primary-color;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+// shop details - review sec css
+.shop-detail-review {
+    .icon-lg {
+        height: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+    }
+
+    .avatar-lg {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    // upload image review
+    .review-pic {
+        border-radius: $theme-border-radius;
+        height: 3rem;
+        min-height: 105px;
+        padding: 0;
+        position: relative;
+        width: 105px;
+        cursor: pointer;
+        background: $theme-color-white;
+
+        .upload-message {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .upload {
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .upload-button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font-size: $font-extra-small;
+            cursor: pointer;
+            outline: inherit;
+            appearance: button;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            left: 0;
+        }
+    }
+}
+
+// shop details - vertical left css
+.product-galery-left {
+    position: relative;
+
+    .gallery-thumb {
+        img {
+            width: 100%;
+            height: auto;
+            border: 1px solid transparent;
+            margin-bottom: 1rem;
+            border-radius: $theme-border-radius;
+
+            @media screen and (max-width:$break-large) {
+                width: 100px;
+                height: auto;
+            }
+        }
+
+    }
+}
+
+// contact form css
+.contact-sec {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    .contact-form {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            border-top: 4px solid $theme-secondary-color;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: -10px;
+            z-index: 0;
+            border-radius: $theme-border-radius;
+
+            @media screen and (max-width:$break-medium) {
+                left: 0;
+            }
+        }
+    }
+}
+
+// maintenance css
+.maintenance-area {
+    position: relative;
+
+    .bg-maintenance {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        background-image: url(../images/section/maintenance-bg.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+// appointment css
+.img-appointment {
+    position: relative;
+
+    img {
+        border-radius: $theme-border-radius;
+        max-width: 100%;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: 4px solid $theme-secondary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        z-index: 0;
+        border-radius: $theme-border-radius;
+    }
+}
+
+// signin css
+.auth-area {
+    position: relative;
+    width: 100%;
+    padding: 12rem 0;
+    display: block;
+    background-image: url(../images/section/auth-area.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+// cart plus minus button
+// shop layout big - add button
+// side small - plus minus button css
+.input-spinner {
+
+    .button-minus,
+    .button-plus {
+        background-color: transparent;
+        border-color: $theme-accent-three;
+        height: 3rem;
+        width: 3.5rem;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+
+        &:hover {
+            background-color: $theme-accent-three;
+            border-color: $theme-accent-three;
+        }
+    }
+
+    .form-input {
+        background: 0 0;
+        border: 1px solid $theme-accent-three;
+        height: 100%;
+        min-height: 3rem;
+        text-align: center;
+        width: 3.5rem !important;
+        padding: 0;
+        font-size: 1rem;
+    }
+}

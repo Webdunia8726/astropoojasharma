@@ -1,0 +1,142 @@
+// breadcrumb section
+.breadcrumb-area {
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/breadcrumb/breadcrumb-image.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 300px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba($theme-color-dark, 0.8);
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        z-index: -1;
+    }
+}
+
+.page-breadcrumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .list {
+        li {
+            display: inline-block;
+            color: $theme-accent-three;
+            position: relative;
+            padding-right: 16px;
+            padding-left: 16px;
+            font-weight: 600;
+
+
+            &:first-child {
+                padding-left: 0px;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            a {
+                color: $theme-accent-one;
+                display: inline-block;
+
+                &::before {
+                    content: "\F135";
+                    position: absolute;
+                    right: -20px;
+                    top: -5px;
+                    font-family: bootstrap-icons !important;
+                    font-size: 2rem;
+                    line-height: initial;
+                    color: $theme-accent-one;
+
+                }
+
+                &:hover {
+                    color: $theme-primary-color;
+                }
+            }
+        }
+    }
+}
+
+// pagination css
+.pagination {
+    li {
+        .page-link {
+            border-radius: $theme-border-radius;
+            background-color: $theme-primary-color;
+            color: $theme-color-white;
+            text-align: center;
+            display: block;
+            margin-right: 6px;
+            width: 3rem;
+            height: 2rem;
+            font-size: 1.5rem;
+            border: none;
+            line-height: 0.8rem;
+
+            &:hover,
+            &.active {
+                background: $theme-secondary-color;
+            }
+
+            &:first-child {
+                border-radius: 0;
+                border-radius: $theme-border-radius;
+            }
+
+            &:last-child {
+                border-radius: 0;
+                border-radius: $theme-border-radius;
+            }
+        }
+
+        &:last-child {
+            a {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .disabled>.page-link,
+    .page-link.disabled {
+        background-color: $theme-accent-one;
+    }
+}
+
+// our partner css
+.partners {
+    padding: 3rem 0;
+
+    .col {
+        img {
+            margin: 0 auto;
+            transition: all .2s ease-in,
+        }
+
+        &:hover {
+            img {
+                transform: scale(0.9);
+            }
+
+        }
+
+    }
+
+
+}

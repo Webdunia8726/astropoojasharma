@@ -1,0 +1,483 @@
+@import 'mixin';
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.font-small {
+    font-size: $font-small;
+}
+
+.font-extra-small {
+    font-size: $font-extra-small;
+}
+
+.font-black {
+    font-weight: $font-black;
+}
+
+// background color css
+.theme-bg-primary {
+    background-color: $theme-primary-color;
+}
+
+.theme-bg-secondary {
+    background-color: $theme-secondary-color;
+}
+
+.theme-bg-accent-one {
+    background-color: $theme-accent-one;
+}
+
+.theme-bg-accent-two {
+    background-color: $theme-accent-two;
+}
+
+.theme-bg-accent-three {
+    background-color: $theme-accent-three;
+}
+
+.theme-bg-white {
+    background-color: $theme-color-white;
+}
+
+// text color css
+.theme-text-white {
+    color: $theme-color-white;
+}
+
+.theme-text-dark {
+    color: $theme-color-dark;
+}
+
+.theme-text-primary {
+    color: $theme-primary-color;
+}
+
+.theme-text-secondary {
+    color: $theme-secondary-color;
+}
+
+.theme-text-accent-one {
+    color: $theme-accent-one;
+}
+
+.theme-text-accent-two {
+    color: $theme-accent-two;
+}
+
+.theme-text-accent-three {
+    color: $theme-accent-three;
+}
+
+// shadow css
+.theme-box-shadow {
+    @include theme-shadow
+}
+
+.theme-text-shadow {
+    text-shadow: $theme-text-shadow;
+}
+
+.theme-border-radius {
+    border-radius: $theme-border-radius;
+}
+
+// custom button css
+.custom-btn-primary {
+    @include custom-btn-primary;
+}
+
+.custom-btn-secondary {
+    @include custom-btn-secondary;
+}
+
+// primary button effect css
+.primary-btn-effect {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+
+    &:hover {
+        color: $theme-color-dark;
+
+        &::before {
+            opacity: 1;
+            width: 116%;
+        }
+
+        &::after {
+            opacity: 1;
+            width: 120%;
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        display: block;
+        background: $theme-accent-one;
+        position: absolute;
+        transform: skewX(-20deg);
+        opacity: 1;
+        left: -10%;
+        top: 0;
+        z-index: -12;
+        transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    &::after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        display: block;
+        background: $theme-primary-color;
+        position: absolute;
+        transform: skewX(-20deg);
+        left: -10%;
+        opacity: 0;
+        top: 0;
+        z-index: -15;
+        transition: all .4s cubic-bezier(.2, .95, .57, .99);
+        box-shadow: 2px 0px 14px rgba($theme-color-dark, .6);
+    }
+}
+
+// secondary button css
+.icon-wrapper {
+    box-shadow: 0 0 0px 0px rgba($theme-secondary-color, 0.5);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 250ms color;
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    @keyframes wave {
+        0% {
+            box-shadow: 0 0 0px 0px rgba($theme-secondary-color, 0.5);
+        }
+
+        100% {
+            box-shadow: 0 0 0px 15px rgba($theme-secondary-color, 0);
+        }
+    }
+}
+
+// card effect
+.cardeffect {
+    transition: all 500ms ease-in-out;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        border-radius: $theme-border-radius 0 $theme-border-radius 0;
+    }
+
+    &::before {
+        left: 0px;
+        top: 0px;
+        border-top: 5px solid $theme-secondary-color;
+        border-left: 5px solid $theme-secondary-color;
+        transition: all .5s ease-in-out;
+    }
+
+    &::after {
+        right: 0px;
+        bottom: 0px;
+        border-bottom: 5px solid $theme-secondary-color;
+        border-right: 5px solid $theme-secondary-color;
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            width: 80px;
+            height: 80px;
+            opacity: 1;
+        }
+    }
+
+}
+
+// anchor button effect
+a.effect {
+    color: $theme-accent-one;
+
+    i {
+        padding-left: 0.5rem;
+    }
+
+    &:hover {
+        color: $theme-primary-color;
+
+        i {
+            color: $theme-primary-color;
+
+            &:before {
+                transform: translateX(5px);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+
+    .bi {
+        &:before {
+            transition: all 0.2s ease;
+        }
+    }
+
+}
+
+// image hover effect
+.img-effect {
+    img {
+        transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.5);
+        }
+    }
+}
+
+// uitility css
+.z-2 {
+    z-index: 2;
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+
+.max {
+    max-width: 650px;
+    margin: auto;
+}
+
+.min-h {
+    min-height: 50px;
+}
+
+// card effect - grow
+.grow-box {
+    display: block;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.9);
+
+    &:hover {
+        transform: translateZ(0);
+    }
+}
+
+// owl nav css
+.owl-carousel {
+    .owl-nav {
+        position: absolute;
+        left: 44%;
+
+        @media screen and (max-width:$break-medium) {
+            left: 0;
+        }
+
+        .owl-prev,
+        .owl-next {
+            background: $theme-color-white !important;
+            color: $theme-primary-color !important;
+            box-shadow: $theme-box-shadow;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 2rem !important;
+            line-height: 1.5rem !important;
+            border: 1px solid $theme-primary-color !important;
+
+            &:hover {
+                background: $theme-secondary-color !important;
+                color: $theme-color-white !important;
+            }
+        }
+    }
+}
+
+// set bg css
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.custom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// image opacity light
+.img-lt {
+    filter: grayscale(100%);
+    transition: .5s ease-in-out;
+
+    &:hover {
+        filter: grayscale(0%)
+    }
+}
+
+// site according css
+.accordion-item {
+    border: 0px;
+    padding: 0.25rem;
+
+    .accordion-button {
+        background-color: $theme-accent-one;
+        border-radius: 0px;
+
+        &:not(.collapsed) {
+            background-color: $theme-accent-one;
+            border-bottom: 2px solid $theme-primary-color;
+            color: $theme-secondary-color;
+            box-shadow: none;
+        }
+
+        &:focus {
+            border-color: $theme-secondary-color;
+        }
+    }
+
+    &:first-of-type {
+        .accordion-button {
+            border-radius: 0px;
+        }
+    }
+
+    &:last-of-type {
+        .accordion-button.collapsed {
+            border-radius: 0px;
+        }
+    }
+}
+
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 0px;
+}
+
+// product hover effect
+.product-quick-view {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    border-radius: $theme-border-radius;
+    overflow: hidden;
+    background-color: $theme-accent-two;
+}
+
+// deal badge
+.deal-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+// product gallery css
+.product-gallery {
+    .slider-for {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .gallery-thumb {
+        margin-top: 1rem;
+
+        img {
+            width: 19%;
+            height: auto;
+            padding: 1%;
+            border-radius: $theme-border-radius;
+        }
+    }
+}
+
+// product gallery zoom css
+div.zoom {
+    background-position: 50% 50%;
+    border-radius: $theme-border-radius;
+    cursor: zoom-in;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    img {
+        display: block;
+        transition: opacity .5s;
+        width: 100%;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+}
+
+// Shine effect
+.hoverShine {
+    .img-effect {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -90%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 50%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba($theme-color-white, 0) 0%, rgba($theme-color-white, .3) 100%);
+            background: linear-gradient(to right, rgba($theme-color-white, 0) 0%, rgba($theme-color-white, .3) 100%);
+            transform: skewX(-25deg);
+        }
+
+        &:hover {
+            &:before {
+                animation: shine .75s;
+
+                @-webkit-keyframes shine {
+                    100% {
+                        left: 125%;
+                    }
+                }
+
+                @keyframes shine {
+                    100% {
+                        left: 125%;
+                    }
+                }
+            }
+        }
+    }
+}
