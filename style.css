@@ -75,16 +75,19 @@ padding: 8px 19px;
 
   /* media hero */
 /* Responsive Design */
+/* Responsive Design */
 
 /* Medium Devices (Tablets, 768px and below) */
 @media (max-width: 768px) {
     .hero-section {
       height: auto; /* Adjust height for smaller screens */
-      /* padding: 20px 0; */
+      padding: 20px 0;
     }
   
     .hero-content {
+      text-align: center; /* Center align text for smaller screens */
       padding: 15px;
+      margin-left: 10px;
     }
   
     .hero-content h1 {
@@ -97,6 +100,7 @@ padding: 8px 19px;
   
     .astro-img {
       height: 400px; /* Adjust height of the image */
+      margin-left: 20px;
     }
   }
   
@@ -116,7 +120,7 @@ padding: 8px 19px;
     }
   
     .astro-img {
-      height: 300px; /* Adjust image height for small screens */
+      height: 400px; /* Adjust image height for small screens */
     }
   }
   
@@ -136,101 +140,46 @@ padding: 8px 19px;
   }
   
 
-
-
   /* why choose us */
-  /* Section Styles */
-.consult-section {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    color: #333;
-  }
+  .consult-section {
+    background-color: #f8f9fa;
+
+    font-family: Arial, sans-serif; /* Apply normal font family */
+}
   
-  /* Left Side Content */
-  .consult-left {
-    flex: 1;
-    max-width: 48%;
-  }
-  
-  .consult-left h2 {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 20px;
-  }
-  
-  .consult-point {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .consult-point i {
-    font-size: 2rem;
-    margin-right: 15px;
-    color: white;
-  }
-  
-  .consult-point h3 {
-    font-size: 1.5rem;
-    margin: 0 0 5px 0;
-  }
-  
-  .consult-point p {
-    font-size: 1rem;
-    margin: 0;
-  }
-  
-  /* Right Side Form */
-  .consult-right {
-    flex: 1;
-    max-width: 48%;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .consult-right h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .consult-form input,
-  .consult-form textarea,
-  .consult-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+  .consult-form {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    background-color: #5C0404 !important;
+    
   }
   
   .consult-form button {
-    background-color: #ffcc00;
-    color: #333;
+    background-color: #C35F31;
     border: none;
-    cursor: pointer;
-    font-weight: bold;
+    padding: 10px;
   }
   
-  .consult-form button:hover {
-    background-color: #ffc107;
+
+  
+  /* Ensure icons are properly sized */
+  .fa-circle-check {
+    color: #28a745;
+  }
+
+  
+  @media (max-width: 576px) {
+    .consult-form {
+      margin: 0; /* Remove any margin for full-width */
+      padding: 20px;
+    }
+  
+    .consult-section .row {
+      flex-direction: column; /* Stack elements vertically */
+    }
+  
+   .consult-section h2{
+    text-align: center;
+    font-weight: 600;
+   }
   }
   
-  @media (max-width: 768px) {
-    .consult-section {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .consult-left, .consult-right {
-      max-width: 100%;
-    }
-  }
