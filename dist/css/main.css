@@ -32,13 +32,7 @@ a:focus {
     color: #E5B8F4;
 }
 
-:focus-visible {
-    outline: none;
-}
 
-button:focus:not(:focus-visible) {
-    box-shadow: 0 0 1.375rem rgba(229, 184, 244, 0.3);
-}
 
 a,
 a:hover {
@@ -346,9 +340,6 @@ a:hover {
     color: #ffffff;
 }
 
-.theme-text-dark {
-    color: #000000;
-}
 
 .theme-text-primary {
     color: #810CA8;
@@ -411,9 +402,6 @@ a:hover {
     z-index: 10;
 }
 
-.primary-btn-effect:hover {
-    color: #000000;
-}
 
 .primary-btn-effect:hover::before {
     opacity: 1;
@@ -476,72 +464,6 @@ a:hover {
     }
 }
 
-.cardeffect {
-    transition: all 500ms ease-in-out;
-    position: relative;
-}
-
-.cardeffect::before,
-.cardeffect::after {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-    border-radius: 2.5rem 0 2.5rem 0;
-}
-
-.cardeffect::before {
-    left: 0px;
-    top: 0px;
-    border-top: 5px solid #2D033B;
-    border-left: 5px solid #2D033B;
-    transition: all 0.5s ease-in-out;
-}
-
-.cardeffect::after {
-    right: 0px;
-    bottom: 0px;
-    border-bottom: 5px solid #2D033B;
-    border-right: 5px solid #2D033B;
-    transition: all 0.5s ease-in-out;
-}
-
-.cardeffect:hover:before,
-.cardeffect:hover:after {
-    width: 80px;
-    height: 80px;
-    opacity: 1;
-}
-
-a.effect {
-    color: #E5B8F4;
-}
-
-a.effect i {
-    padding-left: 0.5rem;
-}
-
-a.effect:hover {
-    color: #810CA8;
-}
-
-a.effect:hover i {
-    color: #810CA8;
-}
-
-a.effect:hover i:before {
-    transform: translateX(5px);
-    transition: all 0.2s ease;
-}
-
-a.effect .bi:before {
-    transition: all 0.2s ease;
-}
-
-.img-effect img {
-    transition: all 0.4s ease-in-out;
-}
 
 .img-effect:hover img {
     transform: scale(1.5);
