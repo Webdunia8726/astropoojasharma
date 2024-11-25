@@ -1,3 +1,22 @@
+
+body{
+  background-color: white;
+  font-family: sans-serif;
+}
+.logo{
+  width: 420px;
+  height: 110px;
+}
+
+/* Medium Devices (Tablets, 768px and below) */
+@media (max-width: 768px) {
+.logo{
+  width: 340px;
+  height: 100px;
+}
+}
+
+
 .hero-section {
     position: relative;
     height: 100vh; /* Full viewport height */
@@ -188,3 +207,205 @@ padding: 8px 19px;
   .aboutname{
     color:#5C0404;
   }
+
+
+
+  .custom-card {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.custom-icon.experience {
+    background: #ff9800; /* Orange for Experience */
+}
+
+.custom-icon.clients {
+    background: #f44336; /* Red for Happy Clients */
+}
+
+.custom-icon.awards {
+    background: #4caf50; /* Green for Awards */
+}
+
+.custom-icon.reviews {
+    background: #2196f3; /* Blue for Reviews */
+}
+
+.highlight {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.details {
+    font-size: 16px;
+    color: #666666;
+}
+
+
+.certificate img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  padding: 30px;
+}
+
+
+/* services */
+  /* Section Styling */
+  .astro-services {
+    padding: 50px 0;
+    font-family: sans-serif;
+    background-color: rgb(252, 244, 244);
+}
+.astro-services h1 {
+  font-weight: 600;
+}
+.astro-services h5{
+  font-weight: bold;
+}
+
+/* Card Styling */
+.service-card {
+    border: none;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+}
+
+
+
+/* Image Styling */
+.service-img {
+ width: 100%;
+ height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Button Styling */
+.btn-call {
+    background-color: #5c0404;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 42px;
+    color: white;
+}
+
+.btn-call:hover {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+
+/* Paragraph Styling */
+.service-desc {
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* Medium Devices (Tablets, 768px and below) */
+@media (max-width: 768px) {
+.navbarbtn{
+  display: none;
+}
+}
+.sticky-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999;
+}
+
+.sticky-buttons .whatsapp-button,
+.sticky-buttons .call-button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  background-color: #25d366;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+}
+
+/* Call Button */
+.call-button {
+  background-color: #007bff;
+}
+
+.call-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Animation Effect */
+.sticky-buttons .whatsapp-button i,
+.sticky-buttons .call-button i {
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+.about-company img{
+  border-radius: 20px;
+}
