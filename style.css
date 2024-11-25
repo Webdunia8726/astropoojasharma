@@ -409,3 +409,226 @@ background-color: white !important;
 .about-company img{
   border-radius: 20px ;
 }
+
+
+
+.info-top{
+  background-color: #5C0404;
+  color: white;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+
+
+.marq-wrap {
+  background-color:#FDBA2B;
+  overflow-x: hidden;
+  color: white;
+}
+
+.marq-wrap .marquee {
+  --gap: 1rem;
+  margin-block: 10px;
+  display: flex;
+  gap: var(--gap);
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.marq-wrap .scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.marq-wrap .list-highlight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+
+}
+
+.marq-wrap .list-highlight li {
+  display: inline-block;
+  margin-left: 2.5rem;
+  position: relative;
+  list-style: none;
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.marq-wrap .list-highlight li:before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  display: block;
+  background-color: #f6eff8;
+  border-radius: 50%;
+  position: absolute;
+  left: -25px;
+  top: 40%;
+}
+
+
+
+.astro-key-features {
+  background: url('dist/images/menu/banner3.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Black overlay to darken background image */
+.astro-key-features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity to your liking */
+  z-index: -1;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.8); /* Light card background */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+}
+
+.feature-count {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.feature-label {
+  font-size: 16px;
+  color: #777;
+}
+
+.astro-testimonials {
+  padding: 60px 0;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-img {
+  margin-bottom: 20px;
+}
+
+.testimonial-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial-content {
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.testimonial-rating i {
+  color: #ff9800;
+}
+
+/* Make sure the carousel items are shown correctly on mobile */
+.carousel-inner .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .row {
+      flex-direction: column;
+  }
+}
+
+
+
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li i {
+  margin-right: 10px;
+}
+
+footer .social-icons a {
+  font-size: 24px;
+}
+
+footer .social-icons a:hover {
+  color: #007bff;
+}
+
+footer .text-white {
+  text-decoration: none;
+}
+
+footer .text-white:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+      text-align: center;
+  }
+}
