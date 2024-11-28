@@ -29,10 +29,9 @@ Purchase:
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<!-- Add Owl Carousel CSS and JS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.default.min.css">
-
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -324,6 +323,42 @@ Purchase:
           <a href="tel:+919988070783" class="btn btn-warning mt-3">Contact Now</a>
       </div>
   </div>
+</section>
+
+
+<!-- award and achievements -->
+<section class="certificates py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Our Certificates & Awards</h1>
+        <div class="owl-carousel owl-theme">
+            <!-- Certificate 1 -->
+            <div class="certificate-item text-center">
+                <img src="dist/images/award/award1.jpg" alt="Certificate 1" class="certificate-img">
+              
+            </div>
+            <!-- Certificate 2 -->
+            <div class="certificate-item text-center">
+                <img src="dist/images/award/award3.jpg" alt="Award 1" class="certificate-img">
+             
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate-item text-center">
+                <img src="dist/images/award/award4.jpg" alt="Certificate 2" class="certificate-img">
+              
+            </div>
+
+            <div class="certificate-item text-center">
+                <img src="dist/images/award/award5.jpg" alt="Certificate 2" class="certificate-img">
+              
+            </div>
+
+            <div class="certificate-item text-center">
+                <img src="dist/images/award/award6.jpg" alt="Certificate 2" class="certificate-img">
+                
+            </div>
+            <!-- Add more certificates as needed -->
+        </div>
+    </div>
 </section>
 
 
@@ -716,31 +751,32 @@ Purchase:
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $(".owl-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-            });
-        });
+      $(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            }
+        }
+    });
+});
+
       </script>
       
 </body>
