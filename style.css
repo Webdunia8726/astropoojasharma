@@ -47,7 +47,7 @@ background-color: white !important;
 }
 
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 10px;
   }
   .astro-img {
@@ -113,7 +113,7 @@ padding: 8px 19px;
       text-align: center; /* Center align text for smaller screens */
       padding: 15px;
       margin-left: 10px;
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   
     .hero-content h1 {
@@ -121,7 +121,7 @@ padding: 8px 19px;
     }
   
     .hero-content p {
-      font-size: 1.3rem; /* Reduce font size for better readability */
+      font-size: 1rem; /* Reduce font size for better readability */
     }
   
     .astro-img {
@@ -140,6 +140,9 @@ padding: 8px 19px;
   
     .hero-content h1 {
       font-size: 2rem; /* Further reduce heading size */
+    }
+    .herosafe{
+      font-size: 12px;
     }
   
     .hero-content p {
