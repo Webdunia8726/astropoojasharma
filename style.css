@@ -38,14 +38,12 @@ background-color: white !important;
     position: relative;
     z-index: 2; /* Above overlay */
     padding: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color */
 
   }
   .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #5C0404;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color */
 }
 
   .hero-content p {
@@ -66,7 +64,6 @@ background-color: white !important;
     color: white;
     font-weight: bold;
 padding: 8px 19px;
-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color */
 
   }
 
@@ -116,6 +113,7 @@ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color
       text-align: center; /* Center align text for smaller screens */
       padding: 15px;
       margin-left: 10px;
+      font-size: 1.3rem;
     }
   
     .hero-content h1 {
@@ -123,7 +121,7 @@ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color
     }
   
     .hero-content p {
-      font-size: 1rem; /* Reduce font size for better readability */
+      font-size: 1.3rem; /* Reduce font size for better readability */
     }
   
     .astro-img {
@@ -145,7 +143,7 @@ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Shadow with a subtle black color
     }
   
     .hero-content p {
-      font-size: 0.9rem; /* Compact font size for small screens */
+      font-size: 1.3rem; /* Compact font size for small screens */
     }
   
     
